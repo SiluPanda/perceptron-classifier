@@ -52,8 +52,7 @@ class Perceptron1vrClassifier:
 		"""
 
 		self.features = trainingData[0].keys() # could be useful later
-		# DO NOT ZERO OUT YOUR WEIGHTS BEFORE STARTING TRAINING, OR
-		# THE AUTOGRADER WILL LIKELY DEDUCT POINTS.
+		
 
 		f = open("perceptron1Iterations.csv","w")
 		f_tr = open("perceptron1IterationsTrain.csv", "w")
@@ -79,7 +78,7 @@ class Perceptron1vrClassifier:
 
 
 
-		## Do not edit code below				
+						
 		if(validate):
 			guesses = self.classify(testData)
 			correct = [guesses[j] == testLabels[j] for j in range(len(testLabels))].count(True)
